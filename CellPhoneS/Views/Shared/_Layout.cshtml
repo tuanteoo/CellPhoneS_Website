@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="~/image/newspaper_icon.png"/>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>@ViewData["Title"] - MegaNews</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+       <nav class="navigation">
+           <div class="nav_left">
+               <h3 class="logo">MEGA.News</h3>
+               <div>
+                   <p>Categories</p>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+               </div>
+               <div>
+                   <p>Pages</p>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+               </div>
+               <p>Contact Us</p>
+               <p>About Us</p>
+           </div>
+
+           <div class="nav_right">
+               <div class="search_bar">
+
+               </div>
+
+               <div class="user_infor">
+
+               </div>
+               <div>
+                    <ion-icon name="bookmark-outline"></ion-icon>
+               </div>
+           </div>
+       </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - MegaNews - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
